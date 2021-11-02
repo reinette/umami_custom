@@ -1,0 +1,11 @@
+{
+	"name": "drupal/umami-custom",
+	"description": "This is an Umami we can control and change for Autopilot demos.",
+	"type": "drupal-theme",
+	"homepage": "https://www.pantheon.io",
+	"license": "GPL-2.0-or-later",
+	"minimum-stability": "dev",
+	"require": {
+  	"php": ">=7.3"
+	}
+}

@@ -1,0 +1,80 @@
+name: Umami Custom
+type: theme
+base theme: classy
+description: 'Custom Umami theme to demo content personalization.'
+version: VERSION
+core: 8.x
+libraries:
+  - umami_custom/global
+  - umami_custom/messages
+  - umami_custom/webfonts-open-sans
+  - umami_custom/webfonts-scope-one
+
+libraries-override:
+  classy/base: umami_custom/classy.base
+  classy/book-navigation: umami_custom/classy.book-navigation
+  classy/dialog: umami_custom/classy.dialog
+  classy/dropbutton: umami_custom/classy.dropbutton
+  classy/file: umami_custom/classy.file
+  classy/forum: umami_custom/classy.forum
+  classy/image-widget: umami_custom/classy.image-widget
+  classy/indented: umami_custom/classy.indented
+  classy/media_embed_ckeditor_theme: umami_custom/classy.media_embed_ckeditor_theme
+  classy/media_embed_error: umami_custom/classy.media_embed_error
+  classy/media_library: umami_custom/classy.media_library
+  classy/messages: false
+  classy/node: umami_custom/classy.node
+  classy/progress: umami_custom/classy.progress
+  classy/search-results: umami_custom/classy.search-results
+  classy/user: umami_custom/classy.user
+  layout_builder/twocol_section:
+    css:
+      theme:
+        layouts/twocol_section/twocol_section.css: layouts/twocol_section/twocol_section.css
+  layout_builder/threecol_section:
+    css:
+      theme:
+        layouts/threecol_section/threecol_section.css: layouts/threecol_section/threecol_section.css
+  layout_builder/fourcol_section:
+    css:
+      theme:
+        layouts/fourcol_section/fourcol_section.css: layouts/fourcol_section/fourcol_section.css
+
+libraries-extend:
+  tour/tour-styling:
+    - umami_custom/demo-umami-tour
+  core/drupal.dialog:
+    - umami_custom/classy.dialog
+  core/drupal.dropbutton:
+    - umami_custom/classy.dropbutton
+  core/drupal.progress:
+    - umami_custom/classy.progress
+  file/drupal.file:
+    - umami_custom/classy.file
+  media/media_embed_ckeditor_theme:
+    - umami_custom/classy.media_embed_ckeditor_theme
+  media_library/view:
+    - umami_custom/classy.media_library
+  media_library/widget:
+    - umami_custom/classy.media_library
+  user/drupal.user:
+    - umami_custom/classy.user
+
+regions:
+  pre_header: Pre-header
+  header: Header
+  highlighted: Highlighted
+  tabs: Tabs
+  banner_top: 'Banner Top'
+  breadcrumbs: Breadcrumbs
+  page_title: 'Page Title'
+  content: Content
+  sidebar: Sidebar
+  content_bottom: 'Content Bottom'
+  footer: Footer
+  bottom: Bottom
+  page_top: 'Page top' # Needed by Drupal Core
+  page_bottom: 'Page bottom' # Needed by Drupal Core
+
+ckeditor_stylesheets:
+  - css/classy/components/media-embed-error.css
